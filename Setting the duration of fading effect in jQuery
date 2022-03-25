@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Fade-In and Fade-Out Effects with Different Speeds</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #BDBFBF;
+      	font: 15px sans-serif;
+      	color: white;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    // Fading out displayed paragraphs with different speeds
+    $(".out-btn").click(function(){
+        $("p.normal").fadeOut();
+        $("p.fast").fadeOut("fast");
+        $("p.slow").fadeOut("slow");
+        $("p.very-fast").fadeOut(50);
+        $("p.very-slow").fadeOut(50);
+    });
+    
+    // Fading in hidden paragraphs with different speeds
+    $(".in-btn").click(function(){
+        $("p.normal").fadeIn();
+        $("p.fast").fadeIn("fast");
+        $("p.slow").fadeIn("slow");
+        $("p.very-fast").fadeIn(50);
+        $("p.very-slow").fadeIn(50);
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="out-btn">Cerrar</button>
+    <button type="button" class="in-btn">Abrir</button>
+    <p class="very-fast">Lorem ipsum dolor sit amet. Ut libero quam aut galisum necessitatibus</p>
+    <p class="normal">Lorem ipsum dolor sit amet. Ut libero quam aut galisum necessitatibus</p>
+    <p class="fast">Lorem ipsum dolor sit amet. Ut libero quam aut galisum necessitatibus</p>
+    <p class="slow">Lorem ipsum dolor sit amet. Ut libero quam aut galisum necessitatibus</p>
+    <p class="very-slow">Lorem ipsum dolor sit amet. Ut libero quam aut galisum necessitatibus.</p>
+</body>
+</html>            
