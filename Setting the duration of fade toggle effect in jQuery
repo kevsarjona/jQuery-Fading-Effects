@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Fade-Toggle Effect with Different Speeds</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+      	margin: 10px;
+        background: #FEEDB9;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    // Fade Toggles paragraphs with different speeds
+    $(".toggle-btn").click(function(){
+        $("p.normal").fadeToggle();
+        $("p.fast").fadeToggle("fast");
+        $("p.slow").fadeToggle("slow");
+        $("p.very-fast").fadeToggle(50);
+        $("p.very-slow").fadeToggle(200);
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Services</button>
+    <p class="very-fast">Lorem ipsum dolor sit amet</p>
+    <p class="normal">Lorem ipsum dolor sit amet</p>
+    <p class="fast">Lorem ipsum dolor sit amet</p>
+    <p class="slow">Lorem ipsum dolor sit amet</p>
+    <p class="very-slow">Lorem ipsum dolor sit amet</p>
+</body>
+</html>                                		
