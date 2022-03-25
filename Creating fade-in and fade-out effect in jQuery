@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Fade-In and Fade-Out Effects</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #C9BEFF;
+    }
+  
+  	button.highlight{
+      background: #BF7BFF;
+      color: white;
+  	}
+</style>
+<script>
+$(document).ready(function(){
+    // Fadeing out displayed paragraphs
+    $(".out-btn").click(function(){
+        $("p").fadeOut("slow");
+    });
+    
+    // Fading in hidden paragraphs
+    $(".in-btn").click(function(){
+        $("p").fadeIn("slow");
+    });
+  
+  	$("button").hover(function(){
+        	$(this).addClass("highlight");
+    	}, function(){
+        	$(this).removeClass("highlight");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="out-btn">x</button>
+    <button type="button" class="in-btn">More info</button>
+    <p>Lorem Ipsum</p>
+    <p>Lorem Ipsum</p>
+  	<p>Lorem Ipsum</p>
+    <p>Lorem Ipsum</p>
+</body>
+</html>    
