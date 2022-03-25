@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Fade-To Effect</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        display: none;
+        padding: 15px;
+        background: #DDA0DD;
+      	font: 18px sans-serif;
+    }
+</style>
+<script>
+$(document).ready(function(){
+    // Fade to paragraphs with different opacity
+    $(".fade").click(function(){
+        $("p.none").fadeTo("fast", 0.2);
+        $("p.partial").fadeTo("slow", 0.5);
+        $("p.complete").fadeTo(1000, 1);
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="fade">Contact</button>
+    <p class="none">Casi no me veo</p>
+    <p class="partial">Me veo mas</p>
+    <p class="complete">Ya me veo</p>
+</body>
+</html>                
