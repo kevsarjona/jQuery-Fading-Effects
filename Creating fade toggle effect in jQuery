@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Example of jQuery Fade-Toggle Effect</title>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<style>
+    p{
+        padding: 15px;
+        background: #FF8383;
+      	font: 18px sans-serif;
+    }
+  
+  	p.highlight{
+     	background: #26B6A0;
+      	color:white;
+  	}
+  
+</style>
+<script>
+$(document).ready(function(){
+    // Toggles paragraphs display with fading
+    $(".toggle-btn").click(function(){
+        $("p").fadeToggle("slow");
+    });
+  
+  	$("p").hover(function(){
+        	$(this).addClass("highlight");
+    	}, function(){
+        	$(this).removeClass("highlight");
+    });
+});
+</script>
+</head>
+<body>
+    <button type="button" class="toggle-btn">Media</button> 
+    <p>Videos</p>
+    <p>Podcast</p>
+  	<p>Social</p>
+</body>
+</html>                                		                                		
